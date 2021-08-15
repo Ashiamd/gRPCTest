@@ -4,13 +4,13 @@
 
 just for study gRPC, a simple test
 
-之后有空再多试试其他service gRPC，目前只试用了Unary 
+之后有空再多试试其他gRPC的service方法，目前只试用了Unary 
 
 *(本来还想引入SpringBoot结合试用，之后有空再说吧)*
 
-service 总共 四种 RPC ：
+gRPC总共支持四种service方法：
 
-+ Unary
-+ Server streaming
-+ Client streaming
-+ Bidirectional streaming
++ Unary RPCs
++ Server streaming RPCs
++ Client streaming RPCs
++ Bidirectional streaming RPCs
