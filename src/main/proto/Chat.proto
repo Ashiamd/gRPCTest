@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option java_package = "ash.grpctest";
+option java_multiple_files = true;
+option java_outer_classname = "Chat";
+
+message User {
+  string name = 1; // 姓名
+  uint32 age = 2; // 年龄
+  uint32 sex = 3; // 性别 ( 0 女 1 男 )
+}
+
+message Message {
+  User user = 1; // 发送人
+  uint64 send_time = 2; // 发送时间
+  string msg = 3; // 发送内容
+}
+
+message ChatRequest {
+  Message chatMessage = 1; // 聊天信息
+}
+
+message ChatResponse {
+  Message chatMessage = 1; // 聊天信息
+}
+
+
+
+service ChatService{
+  rpc ChatMyself(ChatRequest) returns (ChatResponse) {}
+}
+
+
+
